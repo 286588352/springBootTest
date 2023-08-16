@@ -4,6 +4,7 @@ import com.example.springboottest2.entity.User;
 
 import java.util.List;
 
+
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 
