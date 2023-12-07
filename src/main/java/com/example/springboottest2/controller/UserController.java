@@ -30,4 +30,9 @@ public class UserController {
         return Result.OK("无数据");
     }
 
+    @RequestMapping("/selectByPrimaryKey")
+    public Result selectByPrimaryKey(Integer id) {
+        User u = userService.selectByPrimaryKey(id);
+        return Result.OK(u);
+    }
 }

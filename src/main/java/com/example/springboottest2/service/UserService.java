@@ -1,8 +1,8 @@
 package com.example.springboottest2.service;
 
-import com.example.springboottest2.entity.User;
-
 import java.util.List;
+
+import com.example.springboottest2.entity.User;
 
 /**
  * @Author SS
@@ -11,4 +11,6 @@ import java.util.List;
  */
 public interface UserService {
     List<User> query();
+
+    User selectByPrimaryKey(Integer id);
 }

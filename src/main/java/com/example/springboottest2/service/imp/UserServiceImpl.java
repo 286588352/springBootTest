@@ -1,12 +1,13 @@
 package com.example.springboottest2.service.imp;
 
-import com.example.springboottest2.entity.User;
-import com.example.springboottest2.mapper.UserMapper;
-import com.example.springboottest2.service.UserService;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.example.springboottest2.entity.User;
+import com.example.springboottest2.mapper.UserMapper;
+import com.example.springboottest2.service.UserService;
 
 /**
  * @Author SS
@@ -21,5 +22,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> query() {
         return userMapper.query();
+    }
+
+    @Override
+    public User selectByPrimaryKey(Integer id) {
+        return userMapper.selectByPrimaryKey(id);
     }
 }
