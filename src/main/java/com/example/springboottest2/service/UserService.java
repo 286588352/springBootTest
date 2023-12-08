@@ -13,4 +13,6 @@ public interface UserService {
     List<User> query();
 
     User selectByPrimaryKey(Integer id);
+
+    void insertUser(User user);
 }

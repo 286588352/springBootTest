@@ -8,6 +8,8 @@ import java.util.stream.Stream;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * @BelongsProject: springBootTest
@@ -17,6 +19,7 @@ import org.junit.jupiter.api.Test;
  * @Description: TODO
  * @Version: 1.0
  */
+@RunWith(SpringRunner.class)
 class testControllerTest {
     int n =0;
 

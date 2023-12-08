@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,5 +35,11 @@ public class UserController {
     public Result selectByPrimaryKey(Integer id) {
         User u = userService.selectByPrimaryKey(id);
         return Result.OK(u);
+    }
+
+    @RequestMapping("/user")
+    public String userMapping(@RequestBody User user) {
+        userService.insertUser(user);
+        return "ok";
     }
 }
